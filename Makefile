@@ -17,9 +17,16 @@ PRNGDIR    := lib/github.com/sjqtentacles/sml-prng
 TEST_MLB   := test/test.mlb
 SRCS       := $(wildcard $(GLMDIR)/* $(PRNGDIR)/* src/* test/*.sml) $(TEST_MLB)
 
-.PHONY: all test poly test-poly all-tests clean
+.PHONY: all test poly test-poly all-tests example clean
 
 all: $(BIN)/test-mlton
+
+example: $(BIN)/heightmap
+	mkdir -p assets
+	./$(BIN)/heightmap
+
+$(BIN)/heightmap: $(SRCS) examples/heightmap.sml examples/sources.mlb | $(BIN)
+	$(MLTON) -output $@ examples/sources.mlb
 
 $(BIN)/test-mlton: $(SRCS) | $(BIN)
 	$(MLTON) -output $@ $(TEST_MLB)

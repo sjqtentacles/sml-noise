@@ -1,0 +1,6 @@
+$(SML_LIB)/basis/basis.mlb
+
+../src/noise.mlb
+../lib/github.com/sjqtentacles/sml-image/image.mlb
+
+heightmap.sml

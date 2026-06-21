@@ -1,0 +1,10 @@
+(* MLB for the sml-noise library: the vendored sml-glm and sml-prng cores plus
+ * the noise sources. Consumers reference this file.
+ *
+ * The dependency .mlb files are brought in WITHOUT a `local` wrapper so that
+ * consumers (the test suite, examples) can `open Glm`/`Prng` alongside Noise. *)
+$(SML_LIB)/basis/basis.mlb
+../lib/github.com/sjqtentacles/sml-glm/glm.mlb
+../lib/github.com/sjqtentacles/sml-prng/prng.mlb
+noise.sig
+noise.sml

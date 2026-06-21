@@ -1,0 +1,6 @@
+package github.com/sjqtentacles/sml-noise
+
+require {
+  github.com/sjqtentacles/sml-glm
+  github.com/sjqtentacles/sml-prng
+}

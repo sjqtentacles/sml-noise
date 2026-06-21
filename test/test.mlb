@@ -1,0 +1,12 @@
+(* Test executable basis: the noise library (which pulls in the vendored
+ * sml-glm + sml-prng) plus the harness and runner. *)
+$(SML_LIB)/basis/basis.mlb
+../src/noise.mlb
+harness.sml
+support.sml
+test_perlin.sml
+test_value_worley.sml
+test_fbm.sml
+test_continuity.sml
+entry.sml
+main.sml
